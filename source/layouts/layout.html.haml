@@ -1,0 +1,20 @@
+!!! 5
+/[if IE 9]      <html class="no-js lt-ie10 lt-ie9" lang="ru">
+/[if lt IE 10]  <html class="no-js lt-ie10" lang="ru">
+/[if !IE]>
+%html{lang: 'ru', class: 'no-js'}
+  /<![endif]
+  %head
+    %title #{data.page.title || "Новый сайт"}
+    %meta(http-equiv="content-type" content="text/html" charset="utf-8")
+    %meta(http-equiv="x-ua-compatible" content="ie=edge,chrome=1")
+    %meta(name="description" content="")
+    %meta(name="keywords" content="квесты, тимбилдинг, игры в чебоксарах")
+    -# Stylesheets
+    = stylesheet_link_tag 'application'
+  %body{class: current_page.data.body_class || 'page'}
+    = yield
+    -# Javascripts
+    = javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js'
+    = javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
+    = javascript_include_tag 'application'
