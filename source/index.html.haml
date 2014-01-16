@@ -14,17 +14,37 @@ body_class: main
           в Чебоксарах и по всей Чувашии.
         .header-block-nav
           = link_to 'Проекты', '/'
-          %span|
+          %span
+            .sprite-vert-line
           = link_to 'О квестах', '/'
-          %span|
+          %span
+            .sprite-vert-line
           = link_to 'Кто мы', '/'
-          %span|
+          %span
+            .sprite-vert-line
           = link_to 'Контакты', '/'
         .header-block-contact
-          .header-block-phone
-            8-902-663-13-99
-          .header-block-phone
-            29-13-99
+          = link_to 'tel:+79026631399' do
+            .header-block-phone
+              8-902-663-13-99
+          = link_to 'tel:291399' do
+            .header-block-phone
+              29-13-99
+          %a.yellow-btn{"data-toggle" => "modal", href: "#modal-callback", type: "button"} Заказать звонок
+          .modal{id: "modal-callback", :style => "display: none;"}
+            .button-close
+              %a.close{"data-dismiss" => "modal"}×
+            .callback-block-border
+              .callback-block
+                .callback-block-title
+                  Отправьте заявку
+                  %br
+                  ПРЯМО СЕЙЧАС:
+                %form#callbackForm{action: "/sendmail.php", method: "post"}
+                  %input#name.formBodyInput{maxlength: "20", name: "name", type: "text", placeholder: "Введите имя:", 'data-validation' => "length", 'data-validation-length' => "min3"}
+                  %input#phone.formBodyInput.iphone{maxlength: "11", name: "email", type: "text", placeholder: "Введите телефон:", 'data-validation' => "length", 'data-validation-length' => "min10"}
+                  %textarea#msg{name: "msg", placeholder: "Ваш комментарий:", rows: 5}
+                  %input.yellow-submit{name: "commit", type: "submit", value: "Отправить заявку"}
     .row-fluid.header-block-line
     .row-fluid.carousel-row
       .carousel-block
@@ -104,18 +124,22 @@ body_class: main
           %li
             %strong Тимбилдинг
             (приключения, квест, спорт)
+        .sprite-horiz-line
         = link_to '/' do
           %li
             %strong Тренинги
             (командообразование, психология)
+        .sprite-horiz-line
         = link_to '/' do
           %li
             %strong Путешествия
             (поездки, экскурсии, экстрим)
+        .sprite-horiz-line
         = link_to '/' do
           %li
             %strong Праздники
             (корпоративные, дни рождения)
+        .sprite-horiz-line
         = link_to '/' do
           %li
             %strong Реклама
@@ -123,6 +147,8 @@ body_class: main
     .block-about
       .row-fluid
         .span12.block-about-title
+          .sprite-horiz-line
+          .sprite-horiz-line2
           .block-about-title-text
             О нас
       .row-fluid
@@ -135,41 +161,43 @@ body_class: main
     .our-programs
       .row-fluid
         .span12.our-programs-title
+          .sprite-horiz-line
+          .sprite-horiz-line2
           .our-programs-title-text
             Наши программы
       .row
         .our-programs-info
           .span3
             = link_to '/' do
-              %img{title: "", alt: "", src: "../images/promote/2.jpg"}
+              .img{ style: 'background-image: url(../images/promote/2.jpg);'}
               %strong На природе
           .span3
             = link_to '/' do
-              %img{title: "", alt: "", src: "../images/promote/1.jpg"}
+              .img{ style: 'background-image: url(../images/promote/1.jpg);'}
               %strong В офисе/ресторане
           .span3
             = link_to '/' do
-              %img{title: "", alt: "", src: "../images/promote/3.jpg"}
+              .img{ style: 'background-image: url(../images/promote/3.jpg);'}
               %strong Детский праздник
           .span3
             = link_to '/' do
-              %img{title: "", alt: "", src: "../images/promote/5.jpg"}
+              .img{ style: 'background-image: url(../images/promote/5.jpg);'}
               %strong Тренинги
           .span3
             = link_to '/' do
-              %img{title: "", alt: "", src: "../images/promote/4.jpg"}
+              .img{ style: 'background-image: url(../images/promote/4.jpg);'}
               %strong Путешествия
           .span3
             = link_to '/' do
-              %img{title: "", alt: "", src: "../images/promote/6.jpg"}
+              .img{ style: 'background-image: url(../images/promote/6.jpg);'}
               %strong Экстрим
           .span3
             = link_to '/' do
-              %img{title: "", alt: "", src: "../images/promote/1.jpg"}
+              .img{ style: 'background-image: url(../images/promote/1.jpg);'}
               %strong Промо-игры
           .span3
             = link_to '/' do
-              %img{title: "", alt: "", src: "../images/promote/3.jpg"}
+              .img{ style: 'background-image: url(../images/promote/3.jpg);'}
               %strong Прочее
     .take-over
       .row-fluid
@@ -179,7 +207,7 @@ body_class: main
       .row
         .take-over-info
           .span3
-            %img{title: "", alt: "", src: "../images/promote/2.jpg"}
+            .sprite-screenplay
             %strong
               Качественную
               %br
@@ -187,7 +215,7 @@ body_class: main
               %br
               сценария
           .span3
-            %img{title: "", alt: "", src: "../images/promote/1.jpg"}
+            .sprite-animator
             %strong
               Подбор
               %br
@@ -195,7 +223,7 @@ body_class: main
               %br
               аниматоров
           .span3
-            %img{title: "", alt: "", src: "../images/promote/3.jpg"}
+            .sprite-decor
             %strong
               Оформление,
               %br
@@ -203,7 +231,7 @@ body_class: main
               %br
               декор
           .span3
-            %img{title: "", alt: "", src: "../images/promote/5.jpg"}
+            .sprite-photo
             %strong
               Фото/
               %br
@@ -211,19 +239,19 @@ body_class: main
               %br
               сьемку
           .span3
-            %img{title: "", alt: "", src: "../images/promote/4.jpg"}
+            .sprite-play
             %strong
               Проведение
               %br
               мероприятия
           .span3
-            %img{title: "", alt: "", src: "../images/promote/6.jpg"}
+            .sprite-transport
             %strong Транспорт
           .span3
-            %img{title: "", alt: "", src: "../images/promote/1.jpg"}
+            .sprite-keitering
             %strong Кейтеринг
           .span3
-            %img{title: "", alt: "", src: "../images/promote/3.jpg"}
+            .sprite-poligraf
             %strong
               Полиграфическую
               %br
@@ -235,20 +263,45 @@ body_class: main
             Доверьте организацию мероприятия профессионалам
       .entrust-info
         .row
-          .span9
+          .span8
             .how-it-work
               Как это работает:
             .how-it-work-item
-              %li Вы оставляете заявку или звоните нам
-              %li Мы встречаемся с вами, уточняем подробности и ваши желания
-              %li Мы готовим 3 варианта сценария интересующего вас мероприятия
-              %li Утверждаем сценарий, тщательно прорабатываем детали
-              %li Подготовим и проведем мероприятие
-          .span3
-            форма
+              %li
+                Вы оставляете заявку или звоните нам
+                .sprite-okay
+              %li
+                Мы встречаемся с вами, уточняем подробности и ваши желания
+                .sprite-okay
+              %li
+                Мы готовим 3 варианта сценария интересующего вас мероприятия
+                .sprite-okay
+              %li
+                Утверждаем сценарий, тщательно прорабатываем детали
+                .sprite-okay
+              %li
+                Подготовим и проведем мероприятие
+                .sprite-okay
+          .span4
+            .callback-block-border
+              .callback-block
+                .callback-block-title
+                  Отправьте заявку
+                  %br
+                  ПРЯМО СЕЙЧАС:
+                %form#callbackForm{action: "/sendmail.php", method: "post"}
+                  %input#name.formBodyInput{maxlength: "20", name: "name", type: "text", placeholder: "Введите имя:", 'data-validation' => "length", 'data-validation-length' => "min3"}
+                  %input#phone.formBodyInput.iphone{maxlength: "11", name: "email", type: "text", placeholder: "Введите телефон:", 'data-validation' => "length", 'data-validation-length' => "min10"}
+                  -#.input-header Ваша эл.почта
+                  -#%input#email.formBodyInput{maxlength: "100", name: "email", type: "text"}
+                  -#.input-header Сообщение
+                  -#%textarea#msg{name: "msg"}
+                  %input.yellow-submit{name: "commit", type: "submit", value: "Отправить заявку"}
         .row
           .how-it-work-result
+            .sprite-arrow
             Вы получаете позитивные эмоции и отличные отзывы участников
+            .sprite-okay
     .feedback
       .row-fluid
         .span12.feedback-title
@@ -263,19 +316,22 @@ body_class: main
               %li{"data-slide-to" => "2", "data-target" => "#feedbackCarousel"}
             .carousel-inner
               .item.active
-                %img{title: "", alt: "", src: "../images/feedback/otzyvy1.jpg"}
+                .border-img
+                  %img{title: "", alt: "", src: "../images/feedback/otzyvy1.jpg"}
                 .caption
                   .text
                     Это было очень необычно, азартно и весело! Понравилось всем, даже самым скептически настроенным! Я в восторге, друзья тоже!Праздник удался на все 100% Ребята, еще раз огромное Вам СПАСИБО!!!
                   %a.more{ href: "/" } Алена Протасевич. Архитектор. Квест на день рождения.
               .item
-                %img{title: "", alt: "", src: "../images/feedback/otzyvy2.jpg"}
+                .border-img
+                  %img{title: "", alt: "", src: "../images/feedback/otzyvy2.jpg"}
                 .caption
                   .text
                     Ребята готовили для нас ВелоКвест. Сделали все качественно и в срок. На финише у участников велоквеста были только положительные отзывы. Приятно работать с ними, оперативно реагируют на все пожелания.
                   %a.more{ href: "/" } Иван Ярмощук. Руководитель проекта "Hub". ВелоКвест.
               .item
-                %img{title: "", alt: "", src: "../images/feedback/otzyvy3.jpg"}
+                .border-img
+                  %img{title: "", alt: "", src: "../images/feedback/otzyvy3.jpg"}
                 .caption
                   .text
                     На протяжении нескольких лет сотрудничаю с ребятами из агенства "Clever".
@@ -289,10 +345,26 @@ body_class: main
     .row-fluid.footer-block-line
     .row-fluid.footer-block
       .span4
-        1
+        %script{src: "//vk.com/js/api/openapi.js?105", type: "text/javascript"}
+        #vk_groups
+        :javascript
+          VK.Widgets.Group("vk_groups", {mode: 0, width: "300", height: "200", color1: 'FFFFFF', color2: '2B587A', color3: '20b410'}, 53763490);
       .span4
         .logo
       .span4
-        3
+        .footer-block-contact
+          = link_to 'tel:+79026631399' do
+            .footer-block-phone
+              8-902-663-13-99
+          = link_to 'tel:291399' do
+            .footer-block-phone
+              29-13-99
+          = link_to 'mailto:eventquest@mail.ru' do
+            .footer-block-email
+              eventquest@mail.ru
+          .footer-block-link
+            = link_to 'Заказать квест', "#modal-callback", "data-toggle" => "modal"
+            = link_to 'Сценарии квестов', "/"
+
     %footer
       Clever © 2014
