@@ -13,16 +13,16 @@ body_class: main
         .header-block-subtitle
           в Чебоксарах и по всей Чувашии.
         .header-block-nav
-          = link_to 'Проекты', '/'
+          = link_to 'Проекты', 'projects.html'
           %span
             .sprite-vert-line
-          = link_to 'О квестах', '/'
+          = link_to 'О квестах', 'quests.html'
           %span
             .sprite-vert-line
-          = link_to 'Кто мы', '/'
+          = link_to 'Кто мы', 'about.html'
           %span
             .sprite-vert-line
-          = link_to 'Контакты', '/'
+          = link_to 'Контакты', 'contacts.html'
         .header-block-contact
           = link_to 'tel:+79026631399' do
             .header-block-phone
@@ -62,15 +62,15 @@ body_class: main
               .caption
                 %strong Промо квесты
                 .text
-                  Развлекают сотрудников компании,
-                  преобразуя обычный выезд на отдых
-                  в увлекательное экстремальное
-                  приключение с элементами экскурсии.
-                %a.more{href: "quests.html#entertaining"} Подробнее
+                  Рекламируют товары, услуги, события
+                  на улицах города и в сети так, что
+                  участники получают удовольствие и
+                  рассказывают друзьям о впечатлениях.
+                %a.more{href: "quests.html#promo"} Подробнее
             .item
               %img{title: "", alt: "", src: "../images/promote/2.jpg"}
               .caption
-                %strong Промо квесты
+                %strong Развлекательные квесты
                 .text
                   Развлекают сотрудников компании,
                   преобразуя обычный выезд на отдых
@@ -80,43 +80,44 @@ body_class: main
             .item
               %img{title: "", alt: "", src: "../images/promote/3.jpg"}
               .caption
-                %strong Промо квесты
+                %strong Образовательные квесты
                 .text
-                  Развлекают сотрудников компании,
-                  преобразуя обычный выезд на отдых
-                  в увлекательное экстремальное
-                  приключение с элементами экскурсии.
-                %a.more{href: "quests.html#entertaining"} Подробнее
+                  Помогают обучить персонал компании,
+                  студентов или детей в форме уличного
+                  приключения. Команды соперничают друг
+                  с другом, демонстрируя лучшее владение
+                  выученным материалом. 
+                %a.more{href: "quests.html#educational"} Подробнее
             .item
               %img{title: "", alt: "", src: "../images/promote/4.jpg"}
               .caption
-                %strong Промо квесты
+                %strong Социальные квесты
                 .text
-                  Развлекают сотрудников компании,
-                  преобразуя обычный выезд на отдых
-                  в увлекательное экстремальное
-                  приключение с элементами экскурсии.
-                %a.more{href: "quests.html#entertaining"} Подробнее
+                  Развлекательные игры для инвалидов,
+                  детей-сирот, участников социальных
+                  порограмм. Заказываются компаниями
+                  в качестве благотворительных мероприятий.
+                %a.more{href: "quests.html#social"} Подробнее
             .item
               %img{title: "", alt: "", src: "../images/promote/5.jpg"}
               .caption
-                %strong Промо квесты
+                %strong Реалити квест-шоу
                 .text
-                  Развлекают сотрудников компании,
-                  преобразуя обычный выезд на отдых
-                  в увлекательное экстремальное
-                  приключение с элементами экскурсии.
-                %a.more{href: "quests.html#entertaining"} Подробнее
+                  Яркие и динамичные телевизионные квест-шоу,
+                  будут востребованы молодёжной аудиторией
+                  любого телеканала. Также существует 
+                  игровой формат для радиостанций.
+                %a.more{href: "quests.html#show"} Подробнее
             .item
               %img{title: "", alt: "", src: "../images/promote/6.jpg"}
               .caption
-                %strong Промо квесты
+                %strong Сделате квесты сами
                 .text
-                  Развлекают сотрудников компании,
-                  преобразуя обычный выезд на отдых
-                  в увлекательное экстремальное
-                  приключение с элементами экскурсии.
-                %a.more{href: "quests.html#entertaining"} Подробнее
+                  Сценарии, советы и примеры игровых
+                  заданий помогут вам самостоятельно
+                  организовать развлекательный квест
+                  для ваших коллег или друзей.
+                %a.more{href: "quests.html"} Подробнее
           %a.left.carousele-control{"data-slide" => "prev", href: "#myCarousel"}
           %a.right.carousele-control{"data-slide" => "next", href: "#myCarousel"}
       .carousel-nav
@@ -348,7 +349,7 @@ body_class: main
         %script{src: "//vk.com/js/api/openapi.js?105", type: "text/javascript"}
         #vk_groups
         :javascript
-          VK.Widgets.Group("vk_groups", {mode: 0, width: "300", height: "200", color1: 'FFFFFF', color2: '2B587A', color3: '20b410'}, 53763490);
+          VK.Widgets.Group("vk_groups", {mode: 0, width: "300", height: "200", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 53763490);
       .span4
         .logo
       .span4
